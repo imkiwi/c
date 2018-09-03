@@ -2,49 +2,56 @@
 #include<cmath>
 using namespace std;
 
-double real(double a,double b,double c);
-int main()
+void real(double a,double b,double c);
+int main1()
 {
-   double a,b,c,d,x1,x2;
-    cout<<"¦¹¤G¦¸¨ç¼Æ¬° ax^2+bx+c=0"<<endl<<"½Ð¨Ì§Ç¿é¤Ja¡Bb¡Bc¤T­Ó¦³²z¼Æ"<<endl;
-	cin>>a>>b>>c;
-    cout<<"±z¿é¤Jªº¤èµ{¦¡¬°¡G"<<endl;
-	if(b<0)
-    {cout<<a<<"x^2+"<<"("<<b<<")"<<"x+"<<c<<"=0"<<endl;}
+    double a,b,c;
+    cout << "æ­¤äºŒæ¬¡å‡½æ•¸ç‚º ax^2+bx+c=0"<< endl;
+    cout << "è«‹ä¾åºè¼¸å…¥aã€bã€cä¸‰å€‹æœ‰ç†æ•¸"<< endl;
+    cin>>a>>b>>c;
+    cout<<"æ‚¨è¼¸å…¥çš„æ–¹ç¨‹å¼ç‚ºï¼š"<<endl;
+    if(b < 0)
+    {
+        cout<<a<<"x^2+"<<"("<<b<<")"<<"x+"<<c<<"=0"<<endl;
+    }
     else
-    {cout<<a<<"x^2+"<<b<<"x+"<<c<<"=0"<<endl;}
-    cout<<"¦¹¤G¦¸¨ç¼Æ¦h¶µ¦¡ªº®Ú¬°¡G"<<endl;
-   d=pow(b,2)-(4*a*c);
+    {
+        cout<<a<<"x^2+"<<b<<"x+"<<c<<"=0"<<endl;
+    }
+    cout<<"æ­¤äºŒæ¬¡å‡½æ•¸å¤šé …å¼çš„æ ¹ç‚ºï¼š"<<endl;
+    //d=pow(b,2)-(4*a*c);
     real(a,b,c);
     
     system("pause");
     return 0;
 }
 
-
-
-
-double real(double a,double b,double c)
+void real(double a,double b,double c)
 {
-    double d=pow(b,2)-(4*a*c);
-    double x1,x2,x3,x4;
+    double d = pow(b,2)-(4*a*c);
+    double x1,x2;
     
-    if(d>=0)
-    {x1=((-b)+(pow(d,(0.5))))/(2.0*a);
-     x2=((-b)-(pow(d,(0.5))))/(2.0*a);
-     cout<<"x1="<<x1<<endl<<"x2="<<x2<<endl;}
-    
+    if(d >= 0)
+    {
+        x1 = ((-b)+(sqrt(d)))/(2.0*a);
+        x2 = ((-b)-(sqrt(d)))/(2.0*a);
+        cout<<"x1="<<x1<<endl<<"x2="<<x2<<endl;
+    }
     else
     {
         x1=((-b)/(2.0*a));
-        x2=(pow((-d),(0.5))/(2.0*a));
+        x2=(sqrt(d)/(2.0*a));
         
-         if(x1==0)
-           {cout<<x2<<"i"<<endl;
-            cout<<x2<<"i"<<endl;}
+        if(x1==0)
+        {
+            cout<<x2<<"i"<<endl;
+            cout<<x2<<"i"<<endl;
+        }
         else
-        {cout<<"x1="<<x1<<"+("<<x2<<")i"<<endl;
-         cout<<"x2="<<x1<<"-("<<x2<<")i"<<endl;}
+        {
+            cout<<"x1="<<x1<<"+("<<x2<<")i"<<endl;
+            cout<<"x2="<<x1<<"-("<<x2<<")i"<<endl;
+        }
         
-     };
- }
+    }
+}

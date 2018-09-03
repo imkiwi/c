@@ -1,71 +1,73 @@
+//
+//  lili2.cpp
+//  lili_1
+//
+//  Created by Bill Chang on 2018/9/3.
+//  Copyright Â© 2018å¹´ Bill Chang. All rights reserved.
+//
 #include<iostream>
 using namespace std;
-double real(double a1,double b1,double c1,double a2,double b2,double c2);
+
+void real(double a1,double b1,double c1,double a2,double b2,double c2);
+
 int main()
 {
     double a1,b1,c1,a2,b2,c2;
-    double x,y;
     
-    cout<<"¦¹Áp¥ß¤èµ{¦¡¬°:"<<endl<<"(a1)x+(b1)y=c1"<<endl<<"(a2)x+(b2)y=c2"<<endl;
-	 
-    cout<<"½Ð¨Ì§Ç¿é¤J a1 / b1 / c1 / a2 / b2 / c2 "<<endl;
+    cout<<"æ­¤è¯ç«‹æ–¹ç¨‹å¼ç‚º:"<<endl;
+    cout<<"(a1)x+(b1)y=c1"<<endl;
+    cout<<"(a2)x+(b2)y=c2"<<endl;
+    
+    cout<<"è«‹ä¾åºè¼¸å…¥ a1 / b1 / c1 / a2 / b2 / c2 "<<endl;
     cin>>a1>>b1>>c1>>a2>>b2>>c2;
     
-    cout<<"§A¿é¥XªºÁp¥ß¤èµ{¦¡¬°:"<<endl;
+    cout<<"ä½ è¼¸å‡ºçš„è¯ç«‹æ–¹ç¨‹å¼ç‚º:"<<endl;
     
-    if(b1>0&&b2>0)
-	{ cout<<a1<<"x+"<<b1<<"y="<<c1<<endl;
-      cout<<a2<<"x+"<<b2<<"y="<<c2<<endl;
-	}
-	
-	else if(b1<0&&b2>0)
-	 {
-	 	cout<<a1<<"x+("<<b1<<")y="<<c1<<endl;
-        cout<<a2<<"x+"<<b2<<"y="<<c2<<endl;
-	 }
-    
-    else if(b1>0&&b2<0)
+    if(b1 > 0)
     {
-    	cout<<a1<<"x+"<<b1<<"y="<<c1<<endl;
-        cout<<a2<<"x+("<<b2<<")y="<<c2<<endl;
-	}
-	
-	else if(b1<0&&b2<0)
-	{
-	   	cout<<a1<<"x+("<<b1<<")y="<<c1<<endl;
-	   	cout<<a2<<"x+("<<b2<<")y="<<c2<<endl;
-	}
-	
-	 
+        cout<<a1<<"x+"<<b1<<"y="<<c1<<endl;
+    }
+    else if(b1 < 0)
+    {
+        cout<<a1<<"x"<<b1<<"y="<<c1<<endl;
+    }
+    
+    if(b2 > 0)
+    {
+        cout<<a2<<"x+"<<b2<<"y="<<c2<<endl;
+    }
+    else if(b2 < 0)
+    {
+        cout<<a2<<"x"<<b2<<"y="<<c2<<endl;
+    }
+    
     real(a1,b1,c1,a2,b2,c2);
     
     system("pause");
     return 0;
 }
 
-double real(double a1,double b1,double c1,double a2,double b2,double c2)
+void real(double a1,double b1,double c1,double a2,double b2,double c2)
 {
-    double d=((a1*b2)-(a2*b1));
-    double dx=((c1*b2)-(c2*b1));
-    double dy=((a1*c2)-(a2*c1));
-
+    double d = ((a1*b2)-(a2*b1));
+    double dx = ((c1*b2)-(c2*b1));
+    double dy = ((a1*c2)-(a2*c1));
+    
     double nx=dx/d;
     double ny=dy/d;
     if(d==0)
     {
         if(dx==0&&dy==0)
         {
-            cout<<"µL­­¦h¸Ñ"<<endl;
+            cout<<"ç„¡é™å¤šè§£"<<endl;
         }
         else
         {
-            cout<<"µL¸Ñ"<<endl;
+            cout<<"ç„¡è§£"<<endl;
         }
     }
-    
     else
     {
         cout<<"("<<nx<<","<<ny<<")"<<endl;
     }
-    
 }
