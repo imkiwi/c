@@ -17,7 +17,7 @@ int main()
 		return -1;
 	}
 
-	for(int i=0 ; i < arraysize ; i++) 
+	for(int i = 0; i < arraysize; i++)
 	{	
 		fscanf( fp3, "%d" , &a[i]);
 		fscanf( fp4, "%d" , &b[i]);
@@ -34,7 +34,7 @@ int main()
 		fprintf(fp5, "%d\n" , c[i]);
 	}
 
-	fclose(fp3);
+	fclose(fp5);
 
 	return 0;
 } 

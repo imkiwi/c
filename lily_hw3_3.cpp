@@ -27,19 +27,20 @@ int main()
 	
 	else
 	{
-		for(int i=2 ; i<a ; i++)
-	{
-		if( a%i == 0)
-		b+=1;
-	}
-	
-	if( b > 0 )
-		cout << "False" << endl;
-	
-	else
-		cout << "Ture" << endl;
-
-	}
+		for(int i=2 ; i <= sqrt(a) ; i++)
+        {
+            if( a%i == 0)
+            {
+                b += 1;
+                break;
+            }
+        }
+        
+        if( b > 0 )
+            cout << "False" << endl;
+        else
+            cout << "Ture" << endl;
+    }
 
 	system("pause");
 	return 0;

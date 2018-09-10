@@ -36,7 +36,7 @@ int main()
 	}
 	
 	fptr = fopen("2.txt" , "w");
-		for(int i=0 ; i < arraysize ; i++) 
+    for(int i=0 ; i < arraysize ; i++) 
 	{
 		fprintf(fptr, "%d\n" , a[i]);
 	}
