@@ -1,16 +1,16 @@
 #include <iostream>
 using namespace std;
-int main ()
+int main3()
 {
-	int n;
+	int n = 21;
 	
-	cout << "This is Fischer series." <<endl;
-	cout << "Input number,then you can get that value." <<endl;
-	cout << endl;
-	cout << "Please input number  " << endl;
-	cin >> n;
-	
-	double a[n] = {0};
+//    cout << "This is Fischer series." <<endl;
+//    cout << "Input number,then you can get that value." <<endl;
+//    cout << endl;
+//    cout << "Please input number  " << endl;
+//    cin >> n;
+//    
+	double a[20] = {0};
 	int i=0;
 	a[0]=0;
 	a[1]=1;

@@ -1,8 +1,8 @@
 #include <iostream>
 using namespace std;
-int main()
+int main1() // 排版
 {
-	int a=0;
+	int a = 0; // 排版
 	
 	cout << "We can show all Prime number less than you input number." << endl;
 	cout << "Please input number" <<endl;
@@ -10,7 +10,7 @@ int main()
 	cin >> a;
 	cout << endl;
 	cout << "All the Prime number: " << endl;
-	int i;
+	int i; //init
 	
 	for(i=2 ; i<a ; i++)
 	{
@@ -18,7 +18,10 @@ int main()
 		for(int j=2 ; j<i ; j++)
 		{
 			if( i%j == 0)
-			b=b+1;  
+            {
+                b=b+1;        // 排版
+                break;
+            }
 		}	 
 		
 		if(b == 0)
@@ -26,10 +29,6 @@ int main()
 			cout << i << endl;
 		}
 	}
-	
-	
-
-	
 
 	system("pause");
 	return 0;

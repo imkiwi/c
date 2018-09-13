@@ -1,11 +1,13 @@
 #include <iostream>
 #include <fstream>
 #include <iomanip>
+
+#define n 5
 using namespace std;
+
 int main ()
 {
-
-	int n=5;
+	//int n=5;
 	int a[n][n] = {0};
 	int b[n][n] = {0};
 	int c[n][n] = {0};
@@ -39,7 +41,7 @@ int main ()
 		for(int j=0 ; j<n ;j++)
 		{
 			file >> b[i][j];
-			cout << setw(4) << b[i][j];	 
+			cout << setw(4) << b[i][j];	 //good
 		}
 		cout << endl;
 	}
