@@ -12,10 +12,10 @@ int main ()
 	
 	for (int i = 1 ; i <= a ; i++)
 	{
+		cout << setw(a+1-i);
 		
-		for (int j = 1 ; j <= i ; j++)
+		for (int j = 1 ; j <= i*2-1 ; j++)
 		{
-			cout << setw(i-1);
 			cout << i ;
 			
 		}
@@ -24,3 +24,4 @@ int main ()
 	
 	return 0;
 } 
+

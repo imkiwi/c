@@ -1,35 +1,35 @@
 #include <iostream>
+
 using namespace std;
+void getgcd (int num1 , int num2 , int *result);
 int main ()
 {
-	int a = 0;
-	int b = 0;
+	int num1 = 0;
+	int num2 = 0;
+	int result = 0;
+	cin >> num1 >> num2;
+	getgcd (num1 , num2 , &result);
+	cout << result;
+	return 0;
+}
 
-
-	cout << "判斷最大公因數" << endl;
-	cout << "Please input two number." <<endl;
-	
-	cin >> a >> b;
-	
-	if( a < b)
+void getgcd (int num1 , int num2 , int *result)
+{
+	if(num1 < num2)
 	{
-		int t=0;
-		t = a;
-		a = b;
-		b = t;
+		int t = num1;
+		num1 = num2;
+		num2 = t;
+	}
+	
+	for(int i = num2 ; i >= 1 ; i--)
+	{
+		if( num1%i == 0 && num2%i == 0)
+		{
+			*result = i;
+			break;
+		}
 		
 	}
 
-	for(int i = b ; i >1 ; i--)
-	{
-		if( a%i == 0 && b%i ==0 )
-		{
-			cout << i << endl;
-			break;
-		}
-	}
-
-	
-	system("pause");
-	return 0;
 }
